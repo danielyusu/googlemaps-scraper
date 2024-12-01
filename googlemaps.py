@@ -148,7 +148,7 @@ class GoogleMapsScraper:
                 parsed_reviews.append(r)
 
                 # logging to std out
-                print(r)
+                # print(r) # no need to print every review in the console indivually
 
         return parsed_reviews
 
@@ -215,7 +215,7 @@ class GoogleMapsScraper:
             user_url = None
 
         item['id_review'] = id_review
-        item['caption'] = review_text
+        item['review_text'] = review_text
 
         # depends on language, which depends on geolocation defined by Google Maps
         # custom mapping to transform into date should be implemented
@@ -226,9 +226,9 @@ class GoogleMapsScraper:
         item['retrieval_date'] = datetime.now()
         item['rating'] = rating
         item['username'] = username
-        item['n_review_user'] = n_reviews
+        # item['n_review_user'] = n_reviews
         #item['n_photo_user'] = n_photos  ## not available anymore
-        item['url_user'] = user_url
+        # item['url_user'] = user_url
 
         return item
 

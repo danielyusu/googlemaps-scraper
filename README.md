@@ -10,6 +10,14 @@ Follow these steps to use the scraper:
 
         conda create --name scraping python=3.9 --file requirements.txt
 
+        # If conda is not available, use pip
+        pip install -r requirements.txt
+
+        # Or using virtualenv
+        python -m venv scraping
+        source scraping/bin/activate  # On Windows use `scraping\Scripts\activate`
+        pip install -r requirements.txt
+
 **Note**: Python >= 3.9 is required.
 
 ## Basic Usage
